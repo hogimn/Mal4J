@@ -381,7 +381,7 @@ abstract class MyAnimeListSchema_Anime extends MyAnimeListSchema {
             private void populate(){
                 if(draft){
                     draft = false;
-                    populate(((MyAnimeListImpl) mal).getAnimeSchema(id, ((String[]) null)));
+//                    populate(((MyAnimeListImpl) mal).getAnimeSchema(id, ((String[]) null)));
                 }
             }
 
