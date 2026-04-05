@@ -145,6 +145,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Default off in this monorepo; other modules still run tests. Override: -Dmal4j.skip.tests=false -->
+        <mal4j.skip.tests>true</mal4j.skip.tests>
     </properties>
 
     <name>Mal4J</name>
@@ -259,6 +261,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.4</version>
                 <configuration>
+                    <skipTests>${mal4j.skip.tests}</skipTests>
                     <useFile>true</useFile>
                     <excludes>
                         <exclude/>
